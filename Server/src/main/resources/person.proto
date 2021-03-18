@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "proto";
+
+service PersonService {
+  rpc setPerson (Person) returns (PersonSetResponse) {}
+}
+
+message Person {
+  string first_name = 1;
+  string last_name = 2;
+  string cnp = 3;
+}
+
+message PersonSetResponse {
+  int32 age = 1;
+  string gender = 2;
+}
